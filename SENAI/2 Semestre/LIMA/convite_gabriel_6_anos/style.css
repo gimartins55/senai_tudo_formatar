@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, #e62429 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, #0066b3 0%, transparent 25%),
+        #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+/* CONVITE */
+
+.convite {
+    width: 100%;
+    max-width: 650px;
+    min-height: 850px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #f5f5f5;
+
+    border: 8px solid #e62429;
+
+    box-shadow:
+        0 0 0 6px #111,
+        0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* EFEITO QUADRINHOS */
+
+.convite::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(#111 1.5px, transparent 1.5px);
+
+    background-size: 18px 18px;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+/* MARVEL */
+
+.quadrinhos {
+    position: relative;
+
+    width: 180px;
+    margin: 35px auto 20px;
+
+    background: #e62429;
+    color: white;
+
+    border: 5px solid #111;
+
+    font-family: 'Bangers', cursive;
+    font-size: 48px;
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    transform: rotate(-3deg);
+
+    padding: 4px 10px;
+
+    box-shadow: 7px 7px 0 #111;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 15px 45px 40px;
+}
+
+.prepare {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #0066b3;
+
+    margin-bottom: 5px;
+}
+
+/* NOME */
+
+h1 {
+    font-family: 'Bangers', cursive;
+
+    font-size: clamp(70px, 15vw, 110px);
+
+    line-height: 0.85;
+
+    color: #e62429;
+
+    text-shadow:
+        4px 4px 0 #111,
+        7px 7px 0 #0066b3;
+
+    transform: rotate(-2deg);
+
+    margin: 15px 0;
+}
+
+h1 span {
+    display: block;
+
+    font-size: 55px;
+
+    color: #0066b3;
+
+    text-shadow:
+        3px 3px 0 #111;
+}
+
+/* LINHA */
+
+.linha {
+    width: 100%;
+    height: 6px;
+
+    background: #111;
+
+    margin: 25px 0;
+}
+
+/* TEXTO */
+
+.texto {
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    max-width: 480px;
+
+    margin: auto;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin: 30px auto;
+
+    max-width: 430px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+
+    background: white;
+
+    border: 3px solid #111;
+
+    padding: 13px 18px;
+
+    box-shadow: 5px 5px 0 #0066b3;
+}
+
+.info > span {
+    font-size: 30px;
+
+    margin-right: 15px;
+}
+
+.info strong {
+    color: #e62429;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.info p {
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-top: 3px;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    max-width: 430px;
+
+    margin: 25px auto;
+}
+
+.botao {
+    display: block;
+
+    padding: 16px 20px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    border: 4px solid #111;
+
+    box-shadow: 6px 6px 0 #111;
+
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: translate(4px, 4px);
+
+    box-shadow: 2px 2px 0 #111;
+}
+
+.local {
+    background: #0066b3;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+/* FINAL */
+
+.final {
+    margin-top: 30px;
+
+    font-family: 'Bangers', cursive;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    color: #111;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .convite {
+        border-width: 5px;
+    }
+
+    .conteudo {
+        padding: 10px 25px 30px;
+    }
+
+    .quadrinhos {
+        width: 150px;
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+
+    h1 span {
+        font-size: 45px;
+    }
+
+    .texto {
+        font-size: 15px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+}
+
+
+

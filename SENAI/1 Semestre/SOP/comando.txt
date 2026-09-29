@@ -1,0 +1,6 @@
+cd - caminha entre diretório 
+dir - lista diretórios 
+mkdir - criar diretórios 
+rmdir - remove pasta 
+rmdir /s - remove pasta e subpastas 
+type nul - cria arquivos vazios 
